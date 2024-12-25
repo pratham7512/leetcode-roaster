@@ -1,6 +1,7 @@
-const express=require("express")
+const express = require("express");
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 const port = 3000;
 
@@ -8,7 +9,11 @@ const API_KEY = 'AIzaSyD4768bpYo-SKeMb9D_speluUxMyFmOgYg';
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 app.use(express.static('.'));
-app.use(cors())
+app.use(cors());
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 app.get('/roast', async (req, res) => {
     const { username, intensity } = req.query;
