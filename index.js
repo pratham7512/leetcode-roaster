@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchRoast(username, intensity) {
         try {
-            const response = await fetch(`http://localhost:3000/roast/?username=${username}&intensity=${intensity}`);
+            const response = await fetch(`/roast/?username=${username}&intensity=${intensity}`);
             const data = await response.json();
             console.log(data.roast);
             if (data.roast) {
