@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Roaster</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>LeetCode Roaster</h1>
+        <div class="gif-container">
+            <iframe 
+                src="https://giphy.com/embed/MZLGwTB6cikBOyjdGy" 
+                width="300" 
+                height="300" 
+                frameBorder="0" 
+                class="giphy-embed" 
+                allowFullScreen
+            ></iframe>
+        </div>
+        <div class="input-section">
+            <input type="text" id="username" placeholder="Enter LeetCode username">
+            <div class="roast-options">
+                <button class="roast-btn" data-intensity="mild">Mild Roast</button>
+                <button class="roast-btn" data-intensity="medium">Medium Roast</button>
+                <button class="roast-btn" data-intensity="brutal">Brutal Roast</button>
+            </div>
+        </div>
+        <div id="result" class="hidden">
+            <h2>Roast Result</h2>
+            <div id="roast-text"></div>
+        </div>
+        <div id="loading" class="hidden">Roasting in progress...</div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
